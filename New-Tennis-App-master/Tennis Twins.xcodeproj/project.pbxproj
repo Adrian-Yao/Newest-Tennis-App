@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E0724C91F38BEF40006E12F /* ListNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0724C81F38BEF40006E12F /* ListNotesTableViewController.swift */; };
+		5E0724CC1F38E0BD0006E12F /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0724CB1F38E0BD0006E12F /* ListNotesTableViewCell.swift */; };
+		5E22739C1F506C070088F184 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E22739B1F506C070088F184 /* iTunesArtwork.png */; };
+		5E3CC56E1F4B194B004A196E /* scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E3CC56B1F4B194B004A196E /* scroll.png */; };
+		5E3CC56F1F4B194B004A196E /* usopen2009trophy1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E3CC56C1F4B194B004A196E /* usopen2009trophy1.jpg */; };
+		5E3F41671F42011900FCEA3A /* DisplayInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F41661F42011900FCEA3A /* DisplayInfoTableViewController.swift */; };
+		5E3F41731F48DBB200FCEA3A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F41721F48DBB200FCEA3A /* AuthService.swift */; };
+		5E84C3A51F324A1D005E973D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84C3A41F324A1D005E973D /* ProfileViewController.swift */; };
+		5E84C3A71F324A32005E973D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E84C3A61F324A32005E973D /* LaunchScreen.storyboard */; };
+		5E84C3A91F324A3B005E973D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E84C3A81F324A3B005E973D /* Main.storyboard */; };
+		5E84C3AB1F324A47005E973D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E84C3AA1F324A47005E973D /* GoogleService-Info.plist */; };
+		5E84C3B21F3251A4005E973D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E84C3B11F3251A4005E973D /* Login.storyboard */; };
+		5E84C3B41F32529E005E973D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84C3B31F32529E005E973D /* LoginViewController.swift */; };
+		5E84C3BA1F336CBA005E973D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84C3B91F336CBA005E973D /* User.swift */; };
+		5E84C3BF1F337F05005E973D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84C3BE1F337F05005E973D /* UserService.swift */; };
+		5E84C3C11F339B89005E973D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84C3C01F339B89005E973D /* Constants.swift */; };
+		5E84C3C41F339C60005E973D /* Storyboard + Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84C3C31F339C60005E973D /* Storyboard + Utility.swift */; };
+		5E97D6551F322BB5004018F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97D6541F322BB5004018F3 /* AppDelegate.swift */; };
+		5E97D65C1F322BB5004018F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D65B1F322BB5004018F3 /* Assets.xcassets */; };
+		F36082AECCD246F53A9BD3C7 /* Pods_Tennis_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778135CB10B109E6FC1D04DA /* Pods_Tennis_App.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5E0724C81F38BEF40006E12F /* ListNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListNotesTableViewController.swift; path = Controllers/ListNotesTableViewController.swift; sourceTree = "<group>"; };
+		5E0724CB1F38E0BD0006E12F /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListNotesTableViewCell.swift; path = "Tennis App/Views/ListNotesTableViewCell.swift"; sourceTree = "<group>"; };
+		5E22739B1F506C070088F184 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = "Logo without background/App Icon/iTunesArtwork.png"; sourceTree = "<group>"; };
+		5E3CC56B1F4B194B004A196E /* scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scroll.png; path = "Tennis App/Images/scroll.png"; sourceTree = "<group>"; };
+		5E3CC56C1F4B194B004A196E /* usopen2009trophy1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = usopen2009trophy1.jpg; path = "Tennis App/Images/usopen2009trophy1.jpg"; sourceTree = "<group>"; };
+		5E3F41661F42011900FCEA3A /* DisplayInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayInfoTableViewController.swift; path = Controllers/DisplayInfoTableViewController.swift; sourceTree = "<group>"; };
+		5E3F41721F48DBB200FCEA3A /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Services/AuthService.swift; sourceTree = "<group>"; };
+		5E84C3A41F324A1D005E973D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
+		5E84C3A61F324A32005E973D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E84C3A81F324A3B005E973D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		5E84C3AA1F324A47005E973D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E84C3AC1F324A53005E973D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
+		5E84C3B11F3251A4005E973D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
+		5E84C3B31F32529E005E973D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		5E84C3B91F336CBA005E973D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		5E84C3BE1F337F05005E973D /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Services/UserService.swift; sourceTree = "<group>"; };
+		5E84C3C01F339B89005E973D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
+		5E84C3C31F339C60005E973D /* Storyboard + Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard + Utility.swift"; path = "Extensions/Storyboard + Utility.swift"; sourceTree = "<group>"; };
+		5E97D6511F322BB5004018F3 /* Tennis Twins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tennis Twins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E97D6541F322BB5004018F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E97D65B1F322BB5004018F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		778135CB10B109E6FC1D04DA /* Pods_Tennis_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tennis_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A85F66FE8F31A7ABD63F8012 /* Pods-Tennis App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tennis App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tennis App/Pods-Tennis App.debug.xcconfig"; sourceTree = "<group>"; };
+		D5443F26071888EA5A790B55 /* Pods-Tennis App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tennis App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tennis App/Pods-Tennis App.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E97D64E1F322BB5004018F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F36082AECCD246F53A9BD3C7 /* Pods_Tennis_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E0724CA1F38E07C0006E12F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E0724CB1F38E0BD0006E12F /* ListNotesTableViewCell.swift */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5E3CC56D1F4B194B004A196E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5E3CC56B1F4B194B004A196E /* scroll.png */,
+				5E22739B1F506C070088F184 /* iTunesArtwork.png */,
+				5E3CC56C1F4B194B004A196E /* usopen2009trophy1.jpg */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5E84C3AE1F324B34005E973D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E84C3A41F324A1D005E973D /* ProfileViewController.swift */,
+				5E84C3B31F32529E005E973D /* LoginViewController.swift */,
+				5E0724C81F38BEF40006E12F /* ListNotesTableViewController.swift */,
+				5E3F41661F42011900FCEA3A /* DisplayInfoTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5E84C3AF1F324B47005E973D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5E84C3A81F324A3B005E973D /* Main.storyboard */,
+				5E84C3B11F3251A4005E973D /* Login.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		5E84C3B01F324B80005E973D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E84C3AC1F324A53005E973D /* Info.plist */,
+				5E84C3AA1F324A47005E973D /* GoogleService-Info.plist */,
+				5E84C3A61F324A32005E973D /* LaunchScreen.storyboard */,
+				5E84C3C01F339B89005E973D /* Constants.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E84C3B81F336C9F005E973D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E84C3B91F336CBA005E973D /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5E84C3BD1F337EE8005E973D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5E84C3BE1F337F05005E973D /* UserService.swift */,
+				5E3F41721F48DBB200FCEA3A /* AuthService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5E84C3C21F339C33005E973D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E84C3C31F339C60005E973D /* Storyboard + Utility.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		5E97D6481F322BB5004018F3 = {
+			isa = PBXGroup;
+			children = (
+				5E97D6531F322BB5004018F3 /* Tennis Twins */,
+				5E97D6521F322BB5004018F3 /* Products */,
+				D6D30858FC0E985713BF0179 /* Pods */,
+				D8080CEB460A92595FD76367 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5E97D6521F322BB5004018F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E97D6511F322BB5004018F3 /* Tennis Twins.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E97D6531F322BB5004018F3 /* Tennis Twins */ = {
+			isa = PBXGroup;
+			children = (
+				5E97D6541F322BB5004018F3 /* AppDelegate.swift */,
+				5E3CC56D1F4B194B004A196E /* Images */,
+				5E84C3C21F339C33005E973D /* Extensions */,
+				5E84C3BD1F337EE8005E973D /* Services */,
+				5E84C3B81F336C9F005E973D /* Models */,
+				5E0724CA1F38E07C0006E12F /* Views */,
+				5E84C3AE1F324B34005E973D /* View Controllers */,
+				5E84C3AF1F324B47005E973D /* Storyboards */,
+				5E84C3B01F324B80005E973D /* Supporting Files */,
+				5E97D65B1F322BB5004018F3 /* Assets.xcassets */,
+			);
+			name = "Tennis Twins";
+			path = "Tennis App";
+			sourceTree = "<group>";
+		};
+		D6D30858FC0E985713BF0179 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A85F66FE8F31A7ABD63F8012 /* Pods-Tennis App.debug.xcconfig */,
+				D5443F26071888EA5A790B55 /* Pods-Tennis App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8080CEB460A92595FD76367 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				778135CB10B109E6FC1D04DA /* Pods_Tennis_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E97D6501F322BB5004018F3 /* Tennis Twins */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E97D6631F322BB5004018F3 /* Build configuration list for PBXNativeTarget "Tennis Twins" */;
+			buildPhases = (
+				E8B094868787253D629433E9 /* [CP] Check Pods Manifest.lock */,
+				5E97D64D1F322BB5004018F3 /* Sources */,
+				5E97D64E1F322BB5004018F3 /* Frameworks */,
+				5E97D64F1F322BB5004018F3 /* Resources */,
+				D05A93C96EE0394103034CEE /* [CP] Embed Pods Frameworks */,
+				091CBE8EDA5622E8C7333578 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tennis Twins";
+			productName = "Tennis App";
+			productReference = 5E97D6511F322BB5004018F3 /* Tennis Twins.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E97D6491F322BB5004018F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = adyao20;
+				TargetAttributes = {
+					5E97D6501F322BB5004018F3 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = M5747P99YK;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5E97D64C1F322BB5004018F3 /* Build configuration list for PBXProject "Tennis Twins" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E97D6481F322BB5004018F3;
+			productRefGroup = 5E97D6521F322BB5004018F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E97D6501F322BB5004018F3 /* Tennis Twins */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E97D64F1F322BB5004018F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E3CC56F1F4B194B004A196E /* usopen2009trophy1.jpg in Resources */,
+				5E84C3A91F324A3B005E973D /* Main.storyboard in Resources */,
+				5E84C3AB1F324A47005E973D /* GoogleService-Info.plist in Resources */,
+				5E97D65C1F322BB5004018F3 /* Assets.xcassets in Resources */,
+				5E84C3B21F3251A4005E973D /* Login.storyboard in Resources */,
+				5E3CC56E1F4B194B004A196E /* scroll.png in Resources */,
+				5E22739C1F506C070088F184 /* iTunesArtwork.png in Resources */,
+				5E84C3A71F324A32005E973D /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		091CBE8EDA5622E8C7333578 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tennis App/Pods-Tennis App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D05A93C96EE0394103034CEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tennis App/Pods-Tennis App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8B094868787253D629433E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E97D64D1F322BB5004018F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E84C3BA1F336CBA005E973D /* User.swift in Sources */,
+				5E0724C91F38BEF40006E12F /* ListNotesTableViewController.swift in Sources */,
+				5E3F41671F42011900FCEA3A /* DisplayInfoTableViewController.swift in Sources */,
+				5E84C3B41F32529E005E973D /* LoginViewController.swift in Sources */,
+				5E84C3BF1F337F05005E973D /* UserService.swift in Sources */,
+				5E84C3A51F324A1D005E973D /* ProfileViewController.swift in Sources */,
+				5E0724CC1F38E0BD0006E12F /* ListNotesTableViewCell.swift in Sources */,
+				5E84C3C11F339B89005E973D /* Constants.swift in Sources */,
+				5E84C3C41F339C60005E973D /* Storyboard + Utility.swift in Sources */,
+				5E97D6551F322BB5004018F3 /* AppDelegate.swift in Sources */,
+				5E3F41731F48DBB200FCEA3A /* AuthService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5E97D6611F322BB5004018F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5E97D6621F322BB5004018F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E97D6641F322BB5004018F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A85F66FE8F31A7ABD63F8012 /* Pods-Tennis App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M5747P99YK;
+				INFOPLIST_FILE = "$(SRCROOT)/Tennis App/Supporting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Yao.Tennis-Twins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5E97D6651F322BB5004018F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5443F26071888EA5A790B55 /* Pods-Tennis App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M5747P99YK;
+				INFOPLIST_FILE = "$(SRCROOT)/Tennis App/Supporting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Yao.Tennis-Twins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E97D64C1F322BB5004018F3 /* Build configuration list for PBXProject "Tennis Twins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E97D6611F322BB5004018F3 /* Debug */,
+				5E97D6621F322BB5004018F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E97D6631F322BB5004018F3 /* Build configuration list for PBXNativeTarget "Tennis Twins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E97D6641F322BB5004018F3 /* Debug */,
+				5E97D6651F322BB5004018F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E97D6491F322BB5004018F3 /* Project object */;
+}
