@@ -301,6 +301,9 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="6wp-yn-vSP" firstAttribute="leading" secondItem="kKr-EO-9Qe" secondAttribute="trailing" id="y1w-91-ONO"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
