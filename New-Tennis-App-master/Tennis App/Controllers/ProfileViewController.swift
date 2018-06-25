@@ -155,7 +155,7 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     //ACTION
     
     @IBAction func profileLink(_ sender: Any) {
-        openUrl(urlStr: "http://assets.usta.com/assets/639/15/National%20tennis%20Rating%20Program.pdf")
+        openUrl(urlStr: "https://blog.universaltennis.com/2017/06/29/the-universal-tennis-16-level-chart/")
     }
     
     func openUrl(urlStr:String!) {
