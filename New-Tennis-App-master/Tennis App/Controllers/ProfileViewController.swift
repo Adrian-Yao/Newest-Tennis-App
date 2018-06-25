@@ -13,6 +13,7 @@ import GooglePlaces
 
 class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextViewDelegate {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     var age: String?
     var gender: String?
     var level: String?
@@ -63,6 +64,7 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         agePicker.delegate = self
         agePicker.dataSource = self
         levelPicker.delegate = self
