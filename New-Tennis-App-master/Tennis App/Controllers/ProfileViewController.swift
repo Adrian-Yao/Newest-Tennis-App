@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import GooglePlaces
 
-class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextViewDelegate {
+class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     var age: String?
@@ -150,11 +150,28 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var infoTextView: UITextView!
     @IBOutlet weak var matchButton: UIButton!
     
-  
+    @IBOutlet weak var showProfilePic: UIImageView!
+    
     
     
     
     //ACTION
+    
+    @IBAction func chooseProfilePic(_ sender: UITapGestureRecognizer) {
+        
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            showProfilePic.image = image
+            
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     
     @IBAction func profileLink(_ sender: Any) {
         openUrl(urlStr: "https://blog.universaltennis.com/2017/06/29/the-universal-tennis-16-level-chart/")
@@ -172,23 +189,43 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     @IBAction func profileButtonTapped(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Feature Coming Soon.", message: "Due to appear in next update", preferredStyle: .alert)
-        
-        //                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
-        //                    // ...
-        //                }
-        //                alertController.addAction(cancelAction)
-        
-        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
-            // ...
+        let alert = UIAlertController(title: "Upload Photo", message: "", preferredStyle: .actionSheet)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let takePicture = UIAlertAction(title: "Take Photo", style: .default) { (action) in
+            let image = UIImagePickerController()
+            image.delegate = self
+            image.sourceType = .camera
+            image.allowsEditing = true
+            self.present(image, animated: true, completion: nil)
         }
-        alertController.addAction(OKAction)
-        
-        self.present(alertController, animated: true) {
-            // ...
+        let choosePicture = UIAlertAction(title: "Photo library", style: UIAlertActionStyle.default) { (action) in
+            let image = UIImagePickerController()
+            image.delegate = self
+            image.sourceType = .photoLibrary
+            image.allowsEditing = true
+            self.present(image, animated: true, completion: nil)
         }
-        return
-        
+        alert.addAction(takePicture)
+        alert.addAction(choosePicture)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion:nil)
+//        let alertController = UIAlertController(title: "Feature Coming Soon.", message: "Due to appear in next update", preferredStyle: .alert)
+//
+//        //                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
+//        //                    // ...
+//        //                }
+//        //                alertController.addAction(cancelAction)
+//
+//        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+//            // ...
+//        }
+//        alertController.addAction(OKAction)
+//
+//        self.present(alertController, animated: true) {
+//            // ...
+//        }
+//        return
+//        
     }
     
     
