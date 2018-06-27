@@ -50,13 +50,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-xA-wwM">
-                                            <rect key="frame" x="5" y="18" width="46.5" height="23.5"/>
+                                            <rect key="frame" x="10" y="18" width="46.5" height="23.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                             <color key="textColor" red="0.9882352941176471" green="0.68627450980392157" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kj-gK-jmC">
-                                            <rect key="frame" x="325" y="17" width="45" height="24"/>
+                                            <rect key="frame" x="320" y="17" width="45" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="45" id="vOb-2N-mse"/>
                                             </constraints>
@@ -76,12 +76,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="8aS-1j-WJh" firstAttribute="centerY" secondItem="WNG-PL-AMr" secondAttribute="centerY" id="4nA-zA-mxQ"/>
-                                        <constraint firstItem="8aS-1j-WJh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YNO-xA-wwM" secondAttribute="trailing" constant="30" id="AmU-r4-pBo"/>
-                                        <constraint firstItem="2kj-gK-jmC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8aS-1j-WJh" secondAttribute="trailing" constant="30" id="DAr-nw-CAd"/>
+                                        <constraint firstItem="8aS-1j-WJh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YNO-xA-wwM" secondAttribute="trailing" constant="15" id="AmU-r4-pBo"/>
+                                        <constraint firstItem="2kj-gK-jmC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8aS-1j-WJh" secondAttribute="trailing" constant="15" id="DAr-nw-CAd"/>
                                         <constraint firstItem="YNO-xA-wwM" firstAttribute="centerY" secondItem="WNG-PL-AMr" secondAttribute="centerY" id="FnF-7y-GKm"/>
-                                        <constraint firstItem="YNO-xA-wwM" firstAttribute="leading" secondItem="WNG-PL-AMr" secondAttribute="leading" constant="5" id="cEY-wa-cst"/>
+                                        <constraint firstItem="YNO-xA-wwM" firstAttribute="leading" secondItem="WNG-PL-AMr" secondAttribute="leading" constant="10" id="cEY-wa-cst"/>
                                         <constraint firstItem="2kj-gK-jmC" firstAttribute="centerY" secondItem="WNG-PL-AMr" secondAttribute="centerY" id="e6A-v0-hHJ"/>
-                                        <constraint firstAttribute="trailing" secondItem="2kj-gK-jmC" secondAttribute="trailing" constant="5" id="kFF-Hq-rw1"/>
+                                        <constraint firstAttribute="trailing" secondItem="2kj-gK-jmC" secondAttribute="trailing" constant="10" id="kFF-Hq-rw1"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.30588235294117649" green="0.34901960784313724" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
@@ -278,12 +278,13 @@
                                         <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wp-yn-vSP">
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wp-yn-vSP">
                                         <rect key="frame" x="190" y="429" width="155" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.5490196078431373" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" link="YES" staticText="YES" allowsDirectInteraction="YES"/>
                                         </accessibility>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="m1d-CW-raR"/>
                                         </constraints>
@@ -293,6 +294,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cBH-pZ-nFg" appends="YES" id="AWF-7j-ueX"/>
+                                        </connections>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DW-nV-HhX">
                                         <rect key="frame" x="90" y="509" width="255" height="30"/>
@@ -308,6 +312,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="r8N-Z5-woh" firstAttribute="leading" secondItem="kKr-EO-9Qe" secondAttribute="leading" id="0J1-p4-GsK"/>
                                     <constraint firstItem="50I-fv-wbm" firstAttribute="centerY" secondItem="JSF-9a-fPd" secondAttribute="centerY" id="31L-bo-bGM"/>
@@ -360,6 +365,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5P-FO-VWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cBH-pZ-nFg">
+                    <connections>
+                        <action selector="phoneNumberTapped:" destination="Syp-V7-fI6" id="4Q7-aA-OUN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3439.1999999999998" y="47.226386806596707"/>
         </scene>

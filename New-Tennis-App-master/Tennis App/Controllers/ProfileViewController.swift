@@ -10,8 +10,9 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import GooglePlaces
+import FirebaseStorage
 
-class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     var age: String?
@@ -21,6 +22,7 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     var phoneNumber: String?
     var info: String?
     var value: String?
+    var avatar: UIImage?
     
     var isNewUser: Bool = false
     
@@ -72,7 +74,7 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.hideKeyboardWhenTappedAround()
+//        self.hideKeyboardWhenTappedAround()
         
         
         if isNewUser == false {
@@ -139,6 +141,11 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         infoTextView.resignFirstResponder()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     //OUTLET
     @IBOutlet weak var profilePicButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
@@ -163,9 +170,52 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             showProfilePic.image = image
+            self.avatar = image
             
+            let storageRef = Storage.storage().reference()
+            
+            // Points to "images"
+//            let imagesRef = storageRef.child("images")
+//
+//            // Points to "images/space.jpg"
+//            // Note that you can use variables to create child values
+//            let fileName = "space.jpg"
+//            let spaceRef = imagesRef.child(fileName)
+            
+            // File path is "images/space.jpg"
+//            let path = spaceRef.fullPath;
+            
+//            // File name is "space.jpg"
+//            let name = spaceRef.name;
+//
+//            // Points to "images"
+//            let images = spaceRef.parent()
+            
+            let riversRef = storageRef.child("images/" + "\(Date().timeIntervalSince1970).jpg")
+            let imageData = UIImageJPEGRepresentation(avatar!, 0.5)
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            // Upload the file to the path "images/rivers.jpg"
+            let uploadTask = riversRef.putData(imageData!, metadata: metadata) { (metadata, error) in
+                guard let metadata = metadata else {
+                    // Uh-oh, an error occurred!
+                    print("metaData Error", error.debugDescription)
+                    return
+                }
+                // Metadata contains file metadata such as size, content-type.
+                let size = metadata.size
+                // You can also access to download URL after upload.
+                storageRef.downloadURL { (url, error) in
+                    print("download Error", error.debugDescription)
+                    guard let downloadURL = url else {
+                        // Uh-oh, an error occurred!
+                        print("image download success", url)
+                        return
+                    }
+                }
+            }
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -294,7 +344,8 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         //            }
         //        }
         //
-        UserService.create(firUser, displayName: displayName, age: age, gender:gender, level:level, country:country, phoneNumber:phoneNumber,info:info) { (retrievedUser) in
+        
+        UserService.create(firUser, displayName: displayName, age: age, gender:gender, level:level, country:country, phoneNumber:phoneNumber,info:info, image: "") { (retrievedUser) in
             guard let user = retrievedUser
                 else {
                     // handle error
@@ -313,24 +364,27 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
     }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
     
     
 }
 
 //EXTENSIONS
 
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
+//extension UIViewController {
+//    func hideKeyboardWhenTappedAround() {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+//        tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
+//    }
+//
+//    func dismissKeyboard() {
+//        view.endEditing(true)
+//    }
+//}
 
 extension ProfileViewController: GMSAutocompleteViewControllerDelegate {
     

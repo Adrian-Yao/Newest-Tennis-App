@@ -124,9 +124,9 @@ struct UserService {
 //            }
 //    
     
-            static func create(_ firUser: FIRUser, displayName: String, age: String, gender: String, level: String, country: String, phoneNumber: String, info: String, completion: @escaping (User?) -> Void) {
+    static func create(_ firUser: FIRUser, displayName: String, age: String, gender: String, level: String, country: String, phoneNumber: String, info: String, image: String, completion: @escaping (User?) -> Void) {
                 
-                let userAttrs = ["displayName":displayName, "age":age, "gender":gender, "level":level, "country":country, "phoneNumber":phoneNumber, "info":info]
+        let userAttrs = ["displayName":displayName, "age":age, "gender":gender, "level":level, "country":country, "phoneNumber":phoneNumber, "info":info, "image": image]
                 
                 let ref = Database.database().reference().child("users").child(firUser.uid)
                 ref.setValue(userAttrs) { (error, ref) in

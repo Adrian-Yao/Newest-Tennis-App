@@ -22,6 +22,35 @@ class DisplayInfoTableViewController: UIViewController {
 
     
     
+    @IBAction func phoneNumberTapped(_ sender: UITapGestureRecognizer) {
+        
+        let alert = UIAlertController(title: "Get in contact with " + displayName2.text!, message: "", preferredStyle: .actionSheet)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let takePicture = UIAlertAction(title: "Call", style: .default) { (action) in
+            let phoneNumber = self.displayPhoneNumber.text
+            let actionStr = "tel://" + phoneNumber!
+//            let actionStr = "sms:" + phoneNumber!
+            let webView = UIWebView()
+            webView.loadRequest(URLRequest(url: URL(string: actionStr)!))
+            self.view.addSubview(webView)
+        }
+        let choosePicture = UIAlertAction(title: "Message", style: UIAlertActionStyle.default) { (action) in
+            let phoneNumber = self.displayPhoneNumber.text
+            //        let actionStr = "tel://" + phoneNumber!
+            let actionStr = "sms:" + phoneNumber!
+            let webView = UIWebView()
+            webView.loadRequest(URLRequest(url: URL(string: actionStr)!))
+            self.view.addSubview(webView)
+        }
+        alert.addAction(takePicture)
+        alert.addAction(choosePicture)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion:nil)
+        
+        
+    }
+    
+    
     @IBAction func NTRPLink(_ sender: Any) {
         openUrl(urlStr: "https://blog.universaltennis.com/2017/06/29/the-universal-tennis-16-level-chart/")
     }
