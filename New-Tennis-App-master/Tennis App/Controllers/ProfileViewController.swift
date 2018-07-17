@@ -22,11 +22,11 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     var phoneNumber: String?
     var info: String?
     var value: String?
-    var avatar: UIImage?
+    var avatarUrl: String = ""
     
     var isNewUser: Bool = false
     
-
+    var isUploading: Bool = false
     
     //PICKER VIEWS
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -88,6 +88,27 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             phoneNumberTextField.text = user.phoneNumber
             infoTextView.text = user.info
             
+            guard let img =  user.image else {
+                return
+            }
+            
+                if img == "" {
+                    return
+                }
+                self.avatarUrl = img
+            
+            // Load profileViewController and download profile pic later. Better user experience
+            
+                DispatchQueue.global(qos: .default).async(execute: {
+                    do {
+                        let data = try Data(contentsOf:URL(string:self.avatarUrl)!)
+                        DispatchQueue.main.async {
+                            self.showProfilePic.image = UIImage(data: data)
+                        }
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                })
         }
         NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.keyboardWillShow(sender:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
@@ -172,7 +193,6 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             showProfilePic.image = image
-            self.avatar = image
             
             let storageRef = Storage.storage().reference()
             
@@ -194,27 +214,35 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
 //            let images = spaceRef.parent()
             
             let riversRef = storageRef.child("images/" + "\(Date().timeIntervalSince1970).jpg")
-            let imageData = UIImageJPEGRepresentation(avatar!, 0.5)
+            let imageData = UIImageJPEGRepresentation(image, 0.5)
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpeg"
             // Upload the file to the path "images/rivers.jpg"
+            isUploading = true
             let uploadTask = riversRef.putData(imageData!, metadata: metadata) { (metadata, error) in
                 guard let metadata = metadata else {
                     // Uh-oh, an error occurred!
                     print("metaData Error", error.debugDescription)
                     return
                 }
-                // Metadata contains file metadata such as size, content-type.
-                let size = metadata.size
-                // You can also access to download URL after upload.
-                storageRef.downloadURL { (url, error) in
-                    print("download Error", error.debugDescription)
-                    guard let downloadURL = url else {
-                        // Uh-oh, an error occurred!
-                        print("image download success", url)
-                        return
-                    }
+                print("metadata success = ", metadata.downloadURLs![0])
+                guard let urls = metadata.downloadURLs else {
+                    return
                 }
+                self.avatarUrl = urls[0].absoluteString
+                
+                self.isUploading = false
+                // Metadata contains file metadata such as size, content-type.
+//                let size = metadata.size
+                // You can also access to download URL after upload.
+//                storageRef.downloadURL { (url, error) in
+//                    print("download Error", error.debugDescription)
+//                    guard let downloadURL = url else {
+//                        // Uh-oh, an error occurred!
+//                        return
+//                    }
+//                     print("image download success", downloadURL)
+//                }
             }
         }
         self.dismiss(animated: true, completion: nil)
@@ -295,6 +323,10 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     
     @IBAction func matchButtonTapped(_ sender: Any) {
+        if isUploading {
+            print("isUploading")
+            return
+        }
         
         let ageValue = String(agePicker.selectedRow(inComponent: 0) + 12)
         //        var genderValue = Bool(genderSegmentControl.value)
@@ -345,7 +377,7 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         //        }
         //
         
-        UserService.create(firUser, displayName: displayName, age: age, gender:gender, level:level, country:country, phoneNumber:phoneNumber,info:info, image: "") { (retrievedUser) in
+        UserService.create(firUser, displayName: displayName, age: age, gender:gender, level:level, country:country, phoneNumber:phoneNumber,info:info, image: avatarUrl) { (retrievedUser) in
             guard let user = retrievedUser
                 else {
                     // handle error

@@ -22,6 +22,7 @@ struct Constants {
         static let country = "country"
         static let phoneNumber = "phoneNumber"
         static let info = "info"
+        static let image = "image"
     }
 }
 

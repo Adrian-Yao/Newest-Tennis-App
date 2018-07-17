@@ -22,10 +22,11 @@ class User: NSObject {
     let country: String?
     let phoneNumber: String?
     let info: String?
+    let image: String?
     
     // MARK: - Init
     
-    init(uid: String, displayName:String?, age:String?, gender: String?, level: String?, country: String?, phoneNumber: String?, info: String?) {
+    init(uid: String, displayName:String?, age:String?, gender: String?, level: String?, country: String?, phoneNumber: String?, info: String?, image: String?) {
         self.uid = uid
         self.displayName = displayName
         self.age = age
@@ -34,6 +35,7 @@ class User: NSObject {
         self.country = country
         self.phoneNumber = phoneNumber
         self.info = info
+        self.image = image
         
         super.init()
     }
@@ -46,7 +48,8 @@ class User: NSObject {
             let level = dict["level"] as? String,
             let country = dict["country"] as? String,
             let phoneNumber = dict["phoneNumber"] as? String,
-            let info = dict["info"] as? String
+            let info = dict["info"] as? String,
+            let image = dict["image"] as? String
 
         
             else { return nil }
@@ -59,6 +62,7 @@ class User: NSObject {
         self.country = country
         self.phoneNumber = phoneNumber
         self.info = info
+        self.image = image
         
         super.init()
     }
@@ -67,11 +71,12 @@ class User: NSObject {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
             let displayName = aDecoder.decodeObject(forKey: Constants.UserDefaults.displayName) as? String,
             let age = aDecoder.decodeObject(forKey:Constants.UserDefaults.age) as? String,
-        let gender = aDecoder.decodeObject(forKey:Constants.UserDefaults.gender) as? String,
-        let level = aDecoder.decodeObject(forKey:Constants.UserDefaults.level) as? String,
+            let gender = aDecoder.decodeObject(forKey:Constants.UserDefaults.gender) as? String,
+            let level = aDecoder.decodeObject(forKey:Constants.UserDefaults.level) as? String,
             let country = aDecoder.decodeObject(forKey:Constants.UserDefaults.country) as? String,
             let phoneNumber = aDecoder.decodeObject(forKey:Constants.UserDefaults.phoneNumber) as? String,
-            let info = aDecoder.decodeObject(forKey:Constants.UserDefaults.info) as? String
+            let info = aDecoder.decodeObject(forKey:Constants.UserDefaults.info) as? String,
+            let image = aDecoder.decodeObject(forKey:Constants.UserDefaults.image) as? String
 
             else { return nil }
         
@@ -83,6 +88,7 @@ class User: NSObject {
         self.country = country
         self.phoneNumber = phoneNumber
         self.info = info
+        self.image = image
         
         super.init()
     }
@@ -134,6 +140,6 @@ extension User: NSCoding {
         aCoder.encode(country, forKey: Constants.UserDefaults.country)
         aCoder.encode(phoneNumber, forKey:Constants.UserDefaults.phoneNumber)
         aCoder.encode(info, forKey:Constants.UserDefaults.info)
-        
+        aCoder.encode(image, forKey:Constants.UserDefaults.image)
     }
 }

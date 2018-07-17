@@ -15,6 +15,7 @@
 		5E3F41671F42011900FCEA3A /* DisplayInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F41661F42011900FCEA3A /* DisplayInfoTableViewController.swift */; };
 		5E3F41731F48DBB200FCEA3A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F41721F48DBB200FCEA3A /* AuthService.swift */; };
 		5E6E374C20E383EB00E1B25E /* face-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6E374B20E383EB00E1B25E /* face-profile.png */; };
+		5E6E374E20E62F5B00E1B25E /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E374D20E62F5B00E1B25E /* PictureViewController.swift */; };
 		5E84C3A51F324A1D005E973D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84C3A41F324A1D005E973D /* ProfileViewController.swift */; };
 		5E84C3A71F324A32005E973D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E84C3A61F324A32005E973D /* LaunchScreen.storyboard */; };
 		5E84C3A91F324A3B005E973D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E84C3A81F324A3B005E973D /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		5E3F41661F42011900FCEA3A /* DisplayInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayInfoTableViewController.swift; path = Controllers/DisplayInfoTableViewController.swift; sourceTree = "<group>"; };
 		5E3F41721F48DBB200FCEA3A /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Services/AuthService.swift; sourceTree = "<group>"; };
 		5E6E374B20E383EB00E1B25E /* face-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "face-profile.png"; path = "../../../../../Downloads/face-profile.png"; sourceTree = "<group>"; };
+		5E6E374D20E62F5B00E1B25E /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PictureViewController.swift; path = Controllers/PictureViewController.swift; sourceTree = "<group>"; };
 		5E84C3A41F324A1D005E973D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		5E84C3A61F324A32005E973D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E84C3A81F324A3B005E973D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				5E84C3B31F32529E005E973D /* LoginViewController.swift */,
 				5E0724C81F38BEF40006E12F /* ListNotesTableViewController.swift */,
 				5E3F41661F42011900FCEA3A /* DisplayInfoTableViewController.swift */,
+				5E6E374D20E62F5B00E1B25E /* PictureViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E84C3BA1F336CBA005E973D /* User.swift in Sources */,
+				5E6E374E20E62F5B00E1B25E /* PictureViewController.swift in Sources */,
 				5E0724C91F38BEF40006E12F /* ListNotesTableViewController.swift in Sources */,
 				5E3F41671F42011900FCEA3A /* DisplayInfoTableViewController.swift in Sources */,
 				5E84C3B41F32529E005E973D /* LoginViewController.swift in Sources */,

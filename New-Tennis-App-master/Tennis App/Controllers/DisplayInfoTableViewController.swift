@@ -11,6 +11,8 @@ import UIKit
 class DisplayInfoTableViewController: UIViewController {
     var user: User?
     var users: [User]?
+    var avatarUrl: String = ""
+
     
     @IBOutlet weak var displayName2: UILabel!
     @IBOutlet weak var displayAge: UILabel!
@@ -19,8 +21,21 @@ class DisplayInfoTableViewController: UIViewController {
     @IBOutlet weak var displayLevel: UILabel!
     @IBOutlet weak var displayCountry: UILabel!
     @IBOutlet weak var displayPhoneNumber: UILabel!
-
+    @IBOutlet weak var profilePicImage: UIImageView!
     
+    
+    
+    
+    @IBAction func profilePicTapped(_ sender: UITapGestureRecognizer) {
+        self.performSegue(withIdentifier: "expandPictureSegueID", sender: nil)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "expandPictureSegueID" {
+            let vc = segue.destination as! PictureViewController
+            vc.image = self.profilePicImage.image
+        }
+    }
     
     @IBAction func phoneNumberTapped(_ sender: UITapGestureRecognizer) {
         
@@ -92,6 +107,27 @@ class DisplayInfoTableViewController: UIViewController {
             displayLevel.text = user.level
             displayCountry.text = user.country
             displayPhoneNumber.text = user.phoneNumber
+            // Downloading other user's pictures
+            guard let img =  user.image else {
+                return
+            }
+            
+            if img == "" {
+                return
+            }
+            self.avatarUrl = img
+            
+            DispatchQueue.global(qos: .default).async(execute: {
+                do {
+                    let data = try Data(contentsOf:URL(string:self.avatarUrl)!)
+                    DispatchQueue.main.async {
+                        self.profilePicImage.image = UIImage(data: data)
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            })
+            
         } else {
             // 3
             displayName2.text = ""
