@@ -14,7 +14,6 @@
 		5E3CC56F1F4B194B004A196E /* usopen2009trophy1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E3CC56C1F4B194B004A196E /* usopen2009trophy1.jpg */; };
 		5E3F41671F42011900FCEA3A /* DisplayInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F41661F42011900FCEA3A /* DisplayInfoTableViewController.swift */; };
 		5E3F41731F48DBB200FCEA3A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F41721F48DBB200FCEA3A /* AuthService.swift */; };
-		5E6E374C20E383EB00E1B25E /* face-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6E374B20E383EB00E1B25E /* face-profile.png */; };
 		5E6E374E20E62F5B00E1B25E /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E374D20E62F5B00E1B25E /* PictureViewController.swift */; };
 		5E84C3A51F324A1D005E973D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84C3A41F324A1D005E973D /* ProfileViewController.swift */; };
 		5E84C3A71F324A32005E973D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E84C3A61F324A32005E973D /* LaunchScreen.storyboard */; };
@@ -28,18 +27,19 @@
 		5E84C3C41F339C60005E973D /* Storyboard + Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84C3C31F339C60005E973D /* Storyboard + Utility.swift */; };
 		5E97D6551F322BB5004018F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97D6541F322BB5004018F3 /* AppDelegate.swift */; };
 		5E97D65C1F322BB5004018F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D65B1F322BB5004018F3 /* Assets.xcassets */; };
+		5EF9E4922128F006009CFEDC /* face-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF9E4912128F006009CFEDC /* face-profile.png */; };
 		F36082AECCD246F53A9BD3C7 /* Pods_Tennis_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778135CB10B109E6FC1D04DA /* Pods_Tennis_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E0724C81F38BEF40006E12F /* ListNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListNotesTableViewController.swift; path = Controllers/ListNotesTableViewController.swift; sourceTree = "<group>"; };
 		5E0724CB1F38E0BD0006E12F /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListNotesTableViewCell.swift; path = "Tennis App/Views/ListNotesTableViewCell.swift"; sourceTree = "<group>"; };
+		5E16857F210E0F880070D3FB /* Tennis Twins.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tennis Twins.entitlements"; sourceTree = SOURCE_ROOT; };
 		5E22739B1F506C070088F184 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = "Logo without background/App Icon/iTunesArtwork.png"; sourceTree = "<group>"; };
 		5E3CC56B1F4B194B004A196E /* scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scroll.png; path = "Tennis App/Images/scroll.png"; sourceTree = "<group>"; };
 		5E3CC56C1F4B194B004A196E /* usopen2009trophy1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = usopen2009trophy1.jpg; path = "Tennis App/Images/usopen2009trophy1.jpg"; sourceTree = "<group>"; };
 		5E3F41661F42011900FCEA3A /* DisplayInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayInfoTableViewController.swift; path = Controllers/DisplayInfoTableViewController.swift; sourceTree = "<group>"; };
 		5E3F41721F48DBB200FCEA3A /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Services/AuthService.swift; sourceTree = "<group>"; };
-		5E6E374B20E383EB00E1B25E /* face-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "face-profile.png"; path = "../../../../../Downloads/face-profile.png"; sourceTree = "<group>"; };
 		5E6E374D20E62F5B00E1B25E /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PictureViewController.swift; path = Controllers/PictureViewController.swift; sourceTree = "<group>"; };
 		5E84C3A41F324A1D005E973D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		5E84C3A61F324A32005E973D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +55,7 @@
 		5E97D6511F322BB5004018F3 /* Tennis Twins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tennis Twins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E97D6541F322BB5004018F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E97D65B1F322BB5004018F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EF9E4912128F006009CFEDC /* face-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-profile.png"; sourceTree = "<group>"; };
 		778135CB10B109E6FC1D04DA /* Pods_Tennis_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tennis_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A85F66FE8F31A7ABD63F8012 /* Pods-Tennis App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tennis App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tennis App/Pods-Tennis App.debug.xcconfig"; sourceTree = "<group>"; };
 		D5443F26071888EA5A790B55 /* Pods-Tennis App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tennis App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tennis App/Pods-Tennis App.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,7 +85,7 @@
 		5E3CC56D1F4B194B004A196E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5E6E374B20E383EB00E1B25E /* face-profile.png */,
+				5EF9E4912128F006009CFEDC /* face-profile.png */,
 				5E3CC56B1F4B194B004A196E /* scroll.png */,
 				5E22739B1F506C070088F184 /* iTunesArtwork.png */,
 				5E3CC56C1F4B194B004A196E /* usopen2009trophy1.jpg */,
@@ -171,6 +172,7 @@
 		5E97D6531F322BB5004018F3 /* Tennis Twins */ = {
 			isa = PBXGroup;
 			children = (
+				5E16857F210E0F880070D3FB /* Tennis Twins.entitlements */,
 				5E97D6541F322BB5004018F3 /* AppDelegate.swift */,
 				5E3CC56D1F4B194B004A196E /* Images */,
 				5E84C3C21F339C33005E973D /* Extensions */,
@@ -240,6 +242,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = M5747P99YK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -267,11 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E3CC56F1F4B194B004A196E /* usopen2009trophy1.jpg in Resources */,
-				5E6E374C20E383EB00E1B25E /* face-profile.png in Resources */,
 				5E84C3A91F324A3B005E973D /* Main.storyboard in Resources */,
 				5E84C3AB1F324A47005E973D /* GoogleService-Info.plist in Resources */,
 				5E97D65C1F322BB5004018F3 /* Assets.xcassets in Resources */,
 				5E84C3B21F3251A4005E973D /* Login.storyboard in Resources */,
+				5EF9E4922128F006009CFEDC /* face-profile.png in Resources */,
 				5E3CC56E1F4B194B004A196E /* scroll.png in Resources */,
 				5E22739C1F506C070088F184 /* iTunesArtwork.png in Resources */,
 				5E84C3A71F324A32005E973D /* LaunchScreen.storyboard in Resources */,
@@ -373,7 +380,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -395,6 +404,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "19f4ccd5-487a-462a-a6d6-5153c4d17b28";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -423,7 +433,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -438,6 +450,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "19f4ccd5-487a-462a-a6d6-5153c4d17b28";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -449,11 +462,16 @@
 			baseConfigurationReference = A85F66FE8F31A7ABD63F8012 /* Pods-Tennis App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M5747P99YK;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Marina Yao (M5747P99YK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Tennis App/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Yao.Tennis-Twins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -463,11 +481,16 @@
 			baseConfigurationReference = D5443F26071888EA5A790B55 /* Pods-Tennis App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M5747P99YK;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Marina Yao (M5747P99YK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Tennis App/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Yao.Tennis-Twins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
